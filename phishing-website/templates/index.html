@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Phishing Email Detector</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background: #f4f4f4;
+    margin:0;
+    padding:0;
+}
+
+.container{
+    width:60%;
+    margin:auto;
+    margin-top:50px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+h1{
+    color:#333;
+}
+
+textarea{
+    width:100%;
+    height:200px;
+    padding:10px;
+    font-size:18px;
+    border-radius:5px;
+    border:1px solid gray;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    background:blue;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:darkblue;
+}
+
+#loading{
+    display:none;
+    margin-top:20px;
+    color:red;
+    font-size:20px;
+}
+
+.result{
+    margin-top:20px;
+    font-size:25px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Phishing Email Detection</h1>
+
+    <form action="/predict" method="POST" onsubmit="showLoading()">
+
+        <textarea
+            name="email"
+            placeholder="Paste Email Content Here..."
+            required
+        ></textarea>
+
+        <br>
+
+        <button type="submit">
+            Detect Email
+        </button>
+
+    </form>
+
+    <!-- Loading Text -->
+    <div id="loading">
+        Scanning Email...
+    </div>
+
+    <!-- Result -->
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+
+</div>
+
+<script>
+
+function showLoading(){
+
+    document.getElementById("loading").style.display = "block";
+
+}
+
+</script>
+
+</body>
+</html>
