@@ -79,7 +79,7 @@ phishing-email-website/
 
 ---
 
-## 🚀 Getting Started
+## 🚀 To Get Started
 
 ### Prerequisites
 - Python 3.x
@@ -127,9 +127,8 @@ phishing-email-website/
 - **Machine Learning:** Scikit-learn
 - **Data Processing:** Pandas
 - **Frontend:** HTML, CSS, JavaScript
-- **Language Composition:** 56.2% HTML, 43.8% Python
 
-## 📝 Notes
+## 📝 Note
 
 - The current dataset is minimal (4 samples) for demonstration purposes
 - For production use, expand `emails.csv` with a larger, more diverse dataset
@@ -141,6 +140,4 @@ phishing-email-website/
 This is a demonstration project for educational purposes in understanding phishing detection concepts.
 
 ---
-
-**Created:** May 22, 2026  
 **Repository:** [reesdsa13/phishing-email-website](https://github.com/reesdsa13/phishing-email-website)
